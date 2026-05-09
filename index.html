@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David — Frontend Developer & Founder of WebzonixHQ</title>
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+    <meta name="description"
+        content="David is a frontend web developer and founder of WebzonixHQ, building modern responsive websites and digital experiences.">
+    <meta name="keywords"
+        content="David, WebzonixHQ, frontend developer, web developer, HTML CSS JavaScript PHP developer portfolio">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <img src="images/logo.jpg" alt="WebzonixHQ Logo" class="loader-logo-img">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+            <div class="loader-text">Initialising...</div>
+        </div>
+    </div>
+
+    <!-- CURSOR -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- BG CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <div class="logo-wrap">
+                    <img src="images/logo.jpg" alt="WebzonixHQ Logo" class="logo-img">
+                </div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hire Me</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <span class="nav-logo"><span class="logo-bracket">[</span>WZX<span class="logo-dot">.</span><span
+                    class="logo-bracket">]</span></span>
+            <button class="drawer-close" id="drawer-close">✕</button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="drawer-cta">Hire Me →</a>
+    </aside>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-grid-tag">WEBZONIXHQ // 2024</div>
+        <div class="hero-content">
+            <div class="hero-badge"><span class="badge-dot"></span>Available for new projects</div>
+            <h1 class="hero-name">
+                <span class="name-line">Hi, I'm</span>
+                <span class="name-main">David<span class="name-cursor">_</span></span>
+            </h1>
+            <div class="hero-typed-wrap">
+                <span class="typed-prefix">&gt;&nbsp;</span>
+                <span id="typed-text" class="typed-text"></span>
+                <span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-desc">Building modern, responsive websites and immersive digital experiences that help brands
+                and businesses establish a powerful online presence.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+                <a href="assets/CV(MARTINS DAVID AYOBAMI).docx" download class="btn btn-ghost"><i
+                        class="fas fa-download"></i> Download CV</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-bolt"></i> Hire Me</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Years Exp.</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Projects</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Satisfaction</span></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-code-card">
+                <div class="code-card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-filename">david.js</span>
+                </div>
+                <pre class="code-body"><code><span class="kw">const</span> <span class="var">developer</span> = {
+  <span class="prop">name</span>: <span class="str">"David"</span>,
+  <span class="prop">role</span>: <span class="str">"Frontend & Backend Developer"</span>,
+  <span class="prop">brand</span>: <span class="str">"WebzonixHQ"</span>,
+  <span class="prop">stack</span>: [
+    <span class="str">"HTML"</span>, <span class="str">"CSS"</span>,
+    <span class="str">"JavaScript"</span>, <span class="str">"PHP"</span>
+  ],
+  <span class="prop">passion</span>: <span class="str">"Clean UI/UX"</span>,
+  <span class="prop">available</span>: <span class="bool">true</span>
+};</code></pre>
+            </div>
+            <div class="floating-badges">
+                <div class="fbadge fbadge-1"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="fbadge fbadge-2"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="fbadge fbadge-3"><i class="fab fa-js"></i> JS</div>
+                <div class="fbadge fbadge-4"><i class="fab fa-php"></i> PHP</div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint"><span>Scroll</span><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// about_me</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">Who I Am</h2>
+            <div class="about-grid">
+                <div class="about-visual" data-aos="fade-right" data-aos-delay="100">
+                    <div class="about-card-graphic">
+                        <div class="ag-ring ag-ring-1"></div>
+                        <div class="ag-ring ag-ring-2"></div>
+                        <div class="ag-ring ag-ring-3"></div>
+                        <div class="ag-center"><i class="fas fa-code"></i></div>
+                        <div class="ag-orbit ag-orbit-1">
+                            <div class="ag-planet"><i class="fab fa-html5"></i></div>
+                        </div>
+                        <div class="ag-orbit ag-orbit-2">
+                            <div class="ag-planet"><i class="fab fa-js"></i></div>
+                        </div>
+                        <div class="ag-orbit ag-orbit-3">
+                            <div class="ag-planet"><i class="fab fa-php"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-delay="150">
+                    <p class="about-intro">I'm a <strong>frontend and backend web developer</strong> with <strong>4+
+                            years
+                            of
+                            experience</strong> crafting high-quality websites and digital products. I'm also the
+                        founder of <strong>WebzonixHQ</strong> a brand dedicated to delivering premium web solutions
+                        for clients and businesses.</p>
+                    <div class="about-points">
+                        <div class="about-point">
+                            <span class="ap-icon"><i class="fas fa-terminal"></i></span>
+                            <div><strong>Skilled in HTML, CSS, JavaScript & PHP</strong>
+                                <p>Building everything from static landing pages to dynamic web applications with clean,
+                                    maintainable code.</p>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="ap-icon"><i class="fas fa-layer-group"></i></span>
+                            <div><strong>Responsive & Accessible</strong>
+                                <p>Every project is built mobile-first responsive across all screen sizes with
+                                    performance and accessibility in mind.</p>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="ap-icon"><i class="fas fa-rocket"></i></span>
+                            <div><strong>Founder of WebzonixHQ</strong>
+                                <p>Helping brands and businesses establish a strong, professional online presence
+                                    through premium web development.</p>
+                            </div>
+                        </div>
+                        <div class="about-point">
+                            <span class="ap-icon"><i class="fas fa-paint-brush"></i></span>
+                            <div><strong>Passionate about Clean UI/UX</strong>
+                                <p>Focused on delivering beautiful, intuitive interfaces that convert visitors into
+                                    clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Git</span><span>UI/UX</span><span>Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// skills</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">Technical Skills</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">Technologies and tools I work with
+                regularly.</p>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">HTML5</span><span class="skill-pct">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="130">
+                    <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">CSS3</span><span class="skill-pct">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="skill-icon js"><i class="fab fa-js"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">JavaScript</span><span
+                                class="skill-pct">85%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="190">
+                    <div class="skill-icon php"><i class="fab fa-php"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="220">
+                    <div class="skill-icon resp"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">Responsive Design</span><span
+                                class="skill-pct">93%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="93"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="skill-icon ui"><i class="fas fa-vector-square"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">UI/UX Design</span><span
+                                class="skill-pct">80%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="280">
+                    <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">Git / GitHub</span><span
+                                class="skill-pct">65%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="310">
+                    <div class="skill-icon db"><i class="fas fa-database"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">MySQL</span><span class="skill-pct">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="340">
+                    <div class="skill-icon host"><i class="fas fa-server"></i></div>
+                    <div class="skill-info">
+                        <div class="skill-top"><span class="skill-name">Web Hosting</span><span
+                                class="skill-pct">70%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// services</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">What I Build</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">Premium digital solutions tailored for your
+                needs.</p>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sc-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Website Design</h3>
+                    <p>Beautiful, on-brand website designs that captivate visitors and communicate your value clearly.
+                    </p>
+                    <div class="sc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="130">
+                    <div class="sc-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Landing Pages</h3>
+                    <p>High-converting landing pages built for speed, clarity, and maximum lead generation.</p>
+                    <div class="sc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="sc-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Portfolio Websites</h3>
+                    <p>Premium personal and professional portfolios that make you stand out and win clients.</p>
+                    <div class="sc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="190">
+                    <div class="sc-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Student Portals</h3>
+                    <p>Custom academic portals for result management, assignment submission, and student data handling.
+                    </p>
+                    <div class="sc-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="220">
+                    <div class="sc-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Development</h3>
+                    <p>Every website I build works flawlessly across all devices — desktop, tablet, and mobile.</p>
+                    <div class="sc-tags"><span>CSS3</span><span>Flexbox</span><span>Grid</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="sc-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Website Redesign</h3>
+                    <p>Transform outdated websites into modern, fast, and visually stunning digital experiences.</p>
+                    <div class="sc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="280">
+                    <div class="sc-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>Clean, structured, and maintainable frontend code with attention to performance and
+                        accessibility.</p>
+                    <div class="sc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="sc-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// projects</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">Featured Work</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">A selection of projects I've built and
+                shipped.</p>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p1"><i class="fas fa-clipboard-list"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">01</div>
+                        <h3>Student Result Management System</h3>
+                        <p>Full-stack web app for managing and publishing student academic results with admin controls
+                            and student login.</p>
+                        <div class="proj-stack">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="130">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p2"><i class="fas fa-file-upload"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">02</div>
+                        <h3>Assignment Submission Portal</h3>
+                        <p>Academic portal for students to submit assignments online with deadline tracking and lecturer
+                            review panel.</p>
+                        <div class="proj-stack"><span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p3"><i class="fas fa-music"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">03</div>
+                        <h3>DJ / Music Artist Website</h3>
+                        <p>Premium dark-themed DJ portfolio with mixtape gallery, booking system, and animated Three.js
+                            particle background.</p>
+                        <div class="proj-stack"><span>PHP</span><span>Three.js</span><span>GSAP</span><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="190">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p4"><i class="fas fa-briefcase"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">04</div>
+                        <h3>Business Landing Pages</h3>
+                        <p>High-converting business landing pages for various industries including tech, service, and
+                            retail brands.</p>
+                        <div class="proj-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="220">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p5"><i class="fas fa-user-circle"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">05</div>
+                        <h3>Portfolio Websites</h3>
+                        <p>Premium personal portfolios for developers, designers, and creative professionals with modern
+                            animations.</p>
+                        <div class="proj-stack"><span>HTML5</span><span>CSS3</span><span>GSAP</span><span>AOS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="project-img">
+                        <div class="proj-placeholder proj-p6"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="project-overlay"><a href="#" class="proj-btn"><i
+                                    class="fas fa-external-link-alt"></i> Live</a><a href="#"
+                                class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                    <div class="project-info">
+                        <div class="proj-number">06</div>
+                        <h3>Admin Dashboard UI</h3>
+                        <p>Clean and functional admin dashboard with data tables, analytics cards, sidebar navigation,
+                            and dark mode.</p>
+                        <div class="proj-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// experience</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">My Journey</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">How I've grown as a developer over the
+                years.</p>
+            <div class="timeline">
+                <div class="tl-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-date">2024 — Present</div>
+                        <h3 class="tl-title">Founder & Lead Developer</h3>
+                        <div class="tl-company"><i class="fas fa-building"></i> WebzonixHQ</div>
+                        <p class="tl-desc">Founded WebzonixHQ — a web development brand dedicated to building premium
+                            websites and digital products for clients, businesses, and entrepreneurs.</p>
+                        <div class="tl-tags"><span>Leadership</span><span>Web Dev</span><span>Branding</span></div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-date">2022 — 2024</div>
+                        <h3 class="tl-title">Freelance Web Developer</h3>
+                        <div class="tl-company"><i class="fas fa-laptop-code"></i> Self-employed</div>
+                        <p class="tl-desc">Delivered 20+ web projects for clients across different industries
+                            including student portals, business landing pages, and entertainment websites.</p>
+                        <div class="tl-tags"><span>Freelance</span><span>PHP</span><span>Full-stack</span></div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-date">2021 — 2022</div>
+                        <h3 class="tl-title">Frontend Developer</h3>
+                        <div class="tl-company"><i class="fas fa-code"></i> Personal & Client Projects</div>
+                        <p class="tl-desc">Focused on mastering HTML, CSS, and JavaScript. Built responsive websites,
+                            dashboards, and portfolio sites. Developed strong fundamentals in clean UI/UX.</p>
+                        <div class="tl-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-date">2020 — 2021</div>
+                        <h3 class="tl-title">Started Web Development</h3>
+                        <div class="tl-company"><i class="fas fa-seedling"></i> Self-taught</div>
+                        <p class="tl-desc">Began the journey into web development learning HTML and CSS from scratch,
+                            building first static websites, and discovering a deep passion for creating on the web.</p>
+                        <div class="tl-tags"><span>HTML</span><span>CSS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section section-alt">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// testimonials</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">Client Feedback</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">What clients say about working with me.</p>
+            <div class="testimonials-grid">
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"David built our business website from scratch and it looks absolutely
+                        premium. He understood exactly what we needed and delivered beyond expectations. Highly
+                        professional and fast."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">OA</div>
+                        <div><strong>Olumide A.</strong><span>CEO, Olu Ventures</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="130">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"The student portal David built for our department has saved us so much time.
+                        Results are now published online in minutes and students love the clean, easy-to-use interface."
+                    </p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">FK</div>
+                        <div><strong>Dr. Funke K.</strong><span>Dept. Head, University</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"My DJ website is fire! The animations, the mixtape gallery, the booking form
+                        — everything looks world-class. David is genuinely talented and communicates really well
+                        throughout."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">JM</div>
+                        <div><strong>DJ JAMM</strong><span>Music Artist, Lagos</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="190">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"David redesigned our outdated website and the difference is night and day.
+                        Modern, fast, mobile-friendly. We've had more enquiries in two months than we had all last
+                        year."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">AT</div>
+                        <div><strong>Amaka T.</strong><span>Director, TechServe Ltd.</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="220">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"My personal portfolio now looks better than most international developer
+                        portfolios. David's attention to detail in animations and layout is impressive. Already getting
+                        interview requests!"</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">SE</div>
+                        <div><strong>Samuel E.</strong><span>Software Developer</span></div>
+                    </div>
+                </div>
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"Quick turnaround, clean code, and the landing page he built for our product
+                        launch converted so well. We'll definitely continue working with WebzonixHQ for all future
+                        projects."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">BN</div>
+                        <div><strong>Bayo N.</strong><span>Founder, BrandSpace</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-label" data-aos="fade-right">// contact</div>
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50">Let's Work Together</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="80">Have a project in mind? Reach out and let's
+                build something great.</p>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-card">
+                        <a href="mailto:webzonixhq@gmail.com" class="contact-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div><span class="ci-label">Email</span><span class="ci-value">webzonixhq@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/2349024703196" target="_blank" class="contact-item">
+                            <div class="ci-icon green"><i class="fab fa-whatsapp"></i></div>
+                            <div><span class="ci-label">WhatsApp</span><span class="ci-value">+234 902 470 3196</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/webzonixhq" target="_blank" class="contact-item">
+                            <div class="ci-icon pink"><i class="fab fa-instagram"></i></div>
+                            <div><span class="ci-label">Instagram</span><span class="ci-value">@webzonixhq</span></div>
+                        </a>
+                        <a href="https://tiktok.com/@webzonixhq" target="_blank" class="contact-item">
+                            <div class="ci-icon pink"><i class="fab fa-tiktok"></i></div>
+                            <div><span class="ci-label">Tiktok</span><span class="ci-value">@webzonixhq</span></div>
+                        </a>
+                        <a href="https://github.com/webzonixhq" target="_blank" class="contact-item">
+                            <div class="ci-icon"><i class="fab fa-github"></i></div>
+                            <div><span class="ci-label">GitHub</span><span class="ci-value">github.com/webzonixhq</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-availability">
+                        <div class="avail-dot"></div><span>Available for freelance & full-time opportunities</span>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="150">
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/webzonixhq@gmail.com"
+                        method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Portfolio Message">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="form-row">
+                            <div class="form-group"><label>Your Name</label><input type="text" name="name"
+                                    placeholder="Kelvin Paul" required></div>
+                            <div class="form-group"><label>Email Address</label><input type="email" name="email"
+                                    placeholder="your@email.com" required></div>
+                        </div>
+                        <div class="form-group"><label>Subject</label><input type="text" name="subject"
+                                placeholder="Project enquiry..."></div>
+                        <div class="form-group"><label>Message</label><textarea rows="5" name="message"
+                                placeholder="Tell me about your project..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary form-submit"><i class="fas fa-paper-plane"></i>
+                            Send Message</button>
+                        <div class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">WebzonixHQ</div>
+                    <p>Building premium digital experiences, one project at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="mailto:webzonixhq@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/2349024703196" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/webzonixhq" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@webzonixhq" target="_blank" aria-label="TikTok"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://github.com/webzonixhq" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 <strong>WebzonixHQ</strong>. Built by David.</span>
+                <span>All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
